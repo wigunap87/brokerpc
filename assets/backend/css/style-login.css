@@ -1,0 +1,75 @@
+body { 
+	margin:0;
+	padding:0;
+	background-color:#f9f9f9;
+	font-size:12px;
+	color:#666666;
+	font-family:Verdana;
+}
+
+.clear { clear:both; }
+a { text-decoration:none; }
+
+input[type="button"], input[type="submit"] {
+	border:solid 1px #5a799b;
+	padding:3px 10px 3px 10px;
+	border-radius:4px;
+	background: #7899bc; /* Old browsers */
+	background: -moz-linear-gradient(top,  #7899bc 1%, #51779f 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#7899bc), color-stop(100%,#51779f)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #7899bc 1%,#51779f 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #7899bc 1%,#51779f 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #7899bc 1%,#51779f 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #7899bc 1%,#51779f 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7899bc', endColorstr='#51779f',GradientType=0 ); /* IE6-9 */
+	font-size:11px;
+	color:#ffffff;
+	cursor:pointer;
+}
+
+input[type="text"], input[type="password"] {
+	padding:5px;
+	width:250px;
+	border:solid 1px #dae1e8;
+}
+#container { margin:0; padding:0; height:auto;}
+#content { 
+	margin:0 Auto; 
+	width:400px; 
+	border:solid 1px #dae1e8; 
+	border-radius:4px; 
+	-webkit-border-radius:4px; 
+	-moz-border-radius:4px; 
+	-ms-border-radius:4px; 
+	-o-border-radius:4px; 
+	box-shadow:0px 0px 8px #ddd; 
+	-webkit-box-shadow:0px 0px 8px #ddd; 
+	-moz-box-shadow:0px 0px 8px #ddd; 
+	-ms-box-shadow:0px 0px 8px #ddd; 
+	-o-box-shadow:0px 0px 8px #ddd; 
+	margin-top:230px; 
+	padding:0; 
+	min-height:110px;
+	background-color:#f0f1f2;
+}
+form { margin:0; padding:0; }
+.content-head { background-color:#f0f1f2; font-size:11px; font-weight:bold; color:#2b588d; }
+.ch-left { float:left; padding:15px 0 10px 15px;}
+.ch-right { float:right; border-left:solid 1px #dae1e8; padding:15px;}
+.ch-right2 { float:right; padding:25px 25px 15px 15px; background-image:url("../images/icon-keys.png"); background-position:95% 65%; background-repeat:no-repeat;s}
+
+.ch-left img { padding-bottom:5px; }
+.content-cont { margin:0; padding:0; }
+.cc-submit { background-color:#f0f1f2; font-size:11px; padding:10px 0 10px 0; }
+.ccs-left { float:left; font-size:10px; padding:6px 0 0 12px; font-style:italic;}
+.ccs-right { float:right; padding-right:10px;}
+.ccs-left a { color:#2b588d; }
+.ccs-left a:hover { color:#cccccc; }
+
+.field { margin:0; padding:0; background-color:#ffffff; border-bottom:solid 1px #eeeeee; padding:8px; font-size:11px;}
+.fields { margin:0; padding:0; background-color:#f9f9f9; border-bottom:solid 1px #eeeeee; padding:8px; font-size:11px;}
+.field-title { float:left; width:25%; margin-right:10px; padding:10px 0 0 10px;} 
+.field-info { float:right; width:68%; } 
+.fields a { color:#2b588d; text-decoration:none; }
+.fields a:hover { color:#cccccc; text-decoration:none; }
+.field .span { text-align:center; font-style:italic; color:#ff0000;}
