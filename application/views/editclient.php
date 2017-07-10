@@ -108,6 +108,22 @@
 								</div>
 								
 								<div class="fieldspage">
+									<div class="fieldpage-title">Email Operation</div>
+									<div class="fieldpage-info">
+										<input type="text" name="emailoperation" class="input-form" maxlength="100" value="<?php echo $sgal->client_emailoperation; ?>" />
+									</div>
+									<div class="clear"></div>
+								</div>
+								
+								<div class="fieldpage">
+									<div class="fieldpage-title">Sales Person</div>
+									<div class="fieldpage-info">
+										<input type="text" name="salesperson" class="input-form" maxlength="100" value="<?php echo $sgal->client_salesperson; ?>" />
+									</div>
+									<div class="clear"></div>
+								</div>
+								
+								<div class="fieldspage">
 									<div class="fieldpage-title">Notes</div>
 									<div class="fieldpage-info">
 										<textarea name="notes" rows="5" class="input-form"><?php echo $sgal->client_note; ?></textarea>
