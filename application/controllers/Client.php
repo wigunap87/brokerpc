@@ -89,11 +89,13 @@
 						$_rekspv = $this->security->xss_clean($this->input->post('rekspv'));
 						$_feebuy = $this->security->xss_clean($this->input->post('feebuy'));
 						$_feesell = $this->security->xss_clean($this->input->post('feesell'));
+						$_emailoperation = $this->security->xss_clean($this->input->post('emailoperation'));
+						$_salesperson = $this->security->xss_clean($this->input->post('salesperson'));
 						$_notes = $this->security->xss_clean($this->input->post('notes'));
 						$_createdate = date('Y-m-d H:i:s');
 						$_status = $this->security->xss_clean($this->input->post('status'));
 						
-						$this->Client_model->add_client_process($_category, $_broker, $_title, $_address, $_phone, $_email, $_rekrdi, $_rekspv, $_feebuy, $_feesell, $_notes, $_createdate, $_status);
+						$this->Client_model->add_client_process($_category, $_broker, $_title, $_address, $_phone, $_email, $_rekrdi, $_rekspv, $_feebuy, $_feesell, $_emailoperation, $_salesperson, $_notes, $_createdate, $_status);
 						redirect('client', 'refresh');
 					}
 				} else {
@@ -136,10 +138,12 @@
 					$_rekspv = $this->security->xss_clean($this->input->post('rekspv'));
 					$_feebuy = $this->security->xss_clean($this->input->post('feebuy'));
 					$_feesell = $this->security->xss_clean($this->input->post('feesell'));
+					$_emailoperation = $this->security->xss_clean($this->input->post('emailoperation'));
+					$_salesperson = $this->security->xss_clean($this->input->post('salesperson'));
 					$_notes = $this->security->xss_clean($this->input->post('notes'));
 					$_status = $this->security->xss_clean($this->input->post('status'));
 						
-					$this->Client_model->edit_client_process($_getid, $_category, $_broker, $_title, $_address, $_phone, $_email, $_rekrdi, $_rekspv, $_feebuy, $_feesell, $_notes, $_status);
+					$this->Client_model->edit_client_process($_getid, $_category, $_broker, $_title, $_address, $_phone, $_email, $_rekrdi, $_rekspv, $_feebuy, $_feesell, $_emailoperation, $_salesperson, $_notes, $_status);
 					redirect('client', 'refresh');
 					
 				} else {
