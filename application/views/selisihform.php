@@ -19,7 +19,7 @@
   date1='01-01-2015 00:00:00';
   date2='2017-01-01';
   date3='2015-01-01T00:00:00-0400';
-  date4='2015-01-01';">
+  date4='2017-01-05';">
 									<?php echo $this->session->flashdata('errorselisih'); ?>
 									<form method="post" action="<?php echo base_url(); ?>report/selisihprocess" name="add-order" id="add-order" enctype="multipart/form-data" data-toggle="validator">
 										Client<font color="red">*</font>
