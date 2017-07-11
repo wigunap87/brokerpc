@@ -1,3 +1,7 @@
+<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/appdatepicker.js"></script>
+<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/angularjs-datetime-picker.css" />
+<script src="<?php echo base_url(); ?>assets/js/angularjs-datetime-picker.js"></script>
+
 <div class="cr-bottom">
 						<div class="crb-box" id="box-small1">
 							<div class="bbox-head">
@@ -11,7 +15,11 @@
 							</div> 
 							<div class="bbox-cont" id="box-cont1">
 								
-								<div class="formsearch addorder" align=center>
+								<div class="formsearch addorder" align=center ng-app="appDate" ng-init="
+  date1='01-01-2015 00:00:00';
+  date2='2017-01-01';
+  date3='2015-01-01T00:00:00-0400';
+  date4='2015-01-01';">
 									<?php echo $this->session->flashdata('errorselisih'); ?>
 									<form method="post" action="<?php echo base_url(); ?>report/selisihprocess" name="add-order" id="add-order" enctype="multipart/form-data" data-toggle="validator">
 										Client<font color="red">*</font>
@@ -24,12 +32,12 @@
 											?>
 										</select>&nbsp;&nbsp;
 										Start Date<font color="red">*</font>
-										<input type="text" name="startdate" class="input-select" required/>&nbsp;&nbsp;
+										<input ng-model="date2" datetime-picker date-format="yyyy-MM-dd" type="text" name="startdate" class="input-select" id="datepicker" required date-only />&nbsp;&nbsp;
 										End Date<font color="red">*</font>
-										<input type="text" name="enddate" class="input-select" required/>
+										<input ng-model="date4" datetime-picker date-format="yyyy-MM-dd" type="text" name="enddate" class="input-select" id="datepicker" required date-only />&nbsp;&nbsp;
+										
 										<input type="submit" name="submit" value="Filter Email" />
 									</form>
-									
 								</div>
 								
 							</div>
@@ -44,3 +52,4 @@
 						</div>
 						
 					</div> <!-- End of cr-bottom -->
+					

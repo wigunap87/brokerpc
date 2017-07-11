@@ -60,7 +60,40 @@
 						$_createdate = date('Y-m-d H:i:s');
 						$_status = $this->security->xss_clean($this->input->post('status'));
 						
-						$this->Broker_model->add_broker_process($_title, $_code, $_fee1, $_fee2, $_createdate, $_status);
+						if(!empty($_FILES['_userfile']['name'])) {
+							$config = array(
+								'allowed_types' => 'jpg|jpeg|png', // allowed type of images
+								'upload_path' => './media/broker',
+								'max_size' => 3048
+							);
+							$this->load->library('upload',$config);
+								
+							$acak = rand(000000, 999999);
+							$upload = $this->upload->do_upload('_userfile');
+							$data = array('upload_data' => $this->upload->data());
+							$filepath = $data['upload_data']['file_name'];
+							$image_data = $this->upload->data();
+							$image_config = array (
+									'source_image' => $image_data['full_path'],
+									'new_image' => $config['upload_path'],
+									'file_name' => $image_data['file_name'],
+									'maintain_ratio' => true,
+									'width' => 1500,
+									'height' => 530,
+								);
+									
+							$this->load->library('image_lib');
+							//rename uploaded file
+							rename($image_config['new_image'] . "/" . $filepath, $image_config['new_image'] . "/" . $acak . $image_config['file_name']);
+							//unlink($image_config['new_image'] . "/" . $shimages);
+							$folder = $acak . "" .$image_config['file_name'];
+							
+							$_images = $folder;
+						} else if(empty($_FILES['_userfile']['name'])) {
+							$_images = '';
+						}
+						
+						$this->Broker_model->add_broker_process($_title, $_code, $_fee1, $_fee2, $_images, $_createdate, $_status);
 						redirect('broker', 'refresh');
 					}
 				} else {
@@ -108,8 +141,46 @@
 						$_fee1 = $this->security->xss_clean($this->input->post('fee1'));
 						$_fee2 = $this->security->xss_clean($this->input->post('fee2'));
 						$_status = $this->security->xss_clean($this->input->post('status'));
-											
-						$this->Broker_model->edit_broker_process($_getid, $_title, $_code, $_fee1, $_fee2, $_status);
+						
+						$quer = $this->Broker_model->show_broker($_getid);
+						foreach($quer as $query) {
+							$shimages = $query->broker_header;
+						}
+								
+						if(!empty($_FILES['_userfile']['name'])) {
+							$config = array(
+								'allowed_types' => 'jpg|jpeg|png', // allowed type of images
+								'upload_path' => './media/broker',
+								'max_size' => 3048
+							);
+							$this->load->library('upload',$config);
+								
+							$acak = rand(000000, 999999);
+							$upload = $this->upload->do_upload('_userfile');
+							$data = array('upload_data' => $this->upload->data());
+							$filepath = $data['upload_data']['file_name'];
+							$image_data = $this->upload->data();
+							$image_config = array (
+									'source_image' => $image_data['full_path'],
+									'new_image' => $config['upload_path'],
+									'file_name' => $image_data['file_name'],
+									'maintain_ratio' => true,
+									'width' => 1500,
+									'height' => 530,
+								);
+									
+							$this->load->library('image_lib');
+							//rename uploaded file
+							rename($image_config['new_image'] . "/" . $filepath, $image_config['new_image'] . "/" . $acak . $image_config['file_name']);
+							unlink($image_config['new_image'] . "/" . $shimages);
+							$folder = $acak . "" .$image_config['file_name'];
+							
+							$_images = $folder;
+						} else if(empty($_FILES['_userfile']['name'])) {
+							$_images = $shimages;
+						}
+					
+						$this->Broker_model->edit_broker_process($_getid, $_title, $_code, $_fee1, $_fee2, $_images, $_status);
 						redirect('broker', 'refresh');
 					}
 				} else {

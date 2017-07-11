@@ -46,6 +46,15 @@
 								</div>
 								
 								<div class="fieldspage">
+									<div class="fieldpage-title">Header Broker</div>
+									<div class="fieldpage-info">
+										<input type="file" name="_userfile" class="input-form" />
+										<font color="red"><i>Upload width size : 1400px. Allowed type : PNG | JPG. Max upload : 2MB</i></font>
+									</div>
+									<div class="clear"></div>
+								</div>
+								
+								<div class="fieldpage">
 									<div class="fieldpage-title">Status<font color="red">*</font></div>
 									<div class="fieldpage-info">
 										<select name="status" class="input-select" required>

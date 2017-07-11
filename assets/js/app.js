@@ -1,5 +1,6 @@
 var app = angular.module('myApp', []);
 
+
 app.filter('startFrom', function() {
     return function(input, start) {
         if(input) {
@@ -30,3 +31,4 @@ app.controller('customersCrtl', function ($scope, $http, $timeout) {
         $scope.reverse = !$scope.reverse;
     };
 });
+

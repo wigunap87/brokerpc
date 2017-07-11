@@ -47,6 +47,16 @@
 									<div class="clear"></div>
 								</div>
 								
+								<div class="fieldpage">
+									<div class="fieldpage-title">Header Broker</div>
+									<div class="fieldpage-info">
+										<img src="<?php echo base_url(); ?>media/broker/<?php echo $sgal->broker_header; ?>" width="200px" /><br/>
+										<input type="file" name="_userfile" class="input-form" />
+										<font color="red"><i>Upload width size : 1400px. Allowed type : PNG | JPG. Max upload : 2MB</i></font>
+									</div>
+									<div class="clear"></div>
+								</div>
+								
 								<div class="fieldspage">
 									<div class="fieldpage-title">Status<font color="red">*</font></div>
 									<div class="fieldpage-info">

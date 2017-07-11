@@ -1,3 +1,4 @@
+<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/app.js"></script>
 <div class="cr-bottom">
 						<div class="crb-box" id="box-small1">
 							<div class="bbox-head">
@@ -10,7 +11,7 @@
 								</div>
 								<div class="clear"></div>
 							</div> 
-							<div class="bbox-cont" id="box-cont1">
+							<div class="bbox-cont" id="box-cont1" ng-app="myApp">
 								<div class="formsearch" align=right>
 									<span class="glyphicon glyphicon-plus"></span> Add Detail Saham &nbsp;&nbsp; <span class="glyphicon glyphicon-file"></span> View Detail Order &nbsp;&nbsp; <span class="glyphicon glyphicon-remove"></span> Delete Order
 									

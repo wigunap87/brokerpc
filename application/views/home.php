@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app="myApp" ng-app lang="en">
+<html lang="en">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="initial-scale=1">
@@ -17,7 +17,7 @@
 		<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/jquery-1.11.2.min.js"></script>
 		<script type="text/javascript" src="<?php echo base_url(); ?>assets/bootstrap/js/bootstrap.js"></script>
 		<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/angular.min.js"></script>
-		<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/app.js"></script>
+		
 		
 		
 		
