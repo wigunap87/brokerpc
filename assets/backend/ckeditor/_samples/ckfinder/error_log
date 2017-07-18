@@ -1,1 +1,0 @@
-[31-Mar-2015 14:12:11 America/New_York] PHP Fatal error:  Call to undefined function resolveUrl() in /home/t67777/public_html/demo/studiotas-ci/assetsbackend/ckeditor/_samples/ckfinder/config.php on line 82
