@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 11, 2017 at 08:21 AM
+-- Generation Time: Jul 10, 2017 at 09:15 AM
 -- Server version: 5.6.16
 -- PHP Version: 5.5.9
 
@@ -60,7 +60,6 @@ CREATE TABLE IF NOT EXISTS `broker_record` (
   `broker_code` varchar(2) NOT NULL,
   `broker_fee1` decimal(10,5) NOT NULL COMMENT 'Fee Net Buy',
   `broker_fee2` decimal(10,5) NOT NULL COMMENT 'Fee Net Sell',
-  `broker_header` varchar(150) NOT NULL,
   `broker_createdate` datetime NOT NULL,
   `broker_status` enum('Publish','Unpublish') NOT NULL DEFAULT 'Unpublish',
   PRIMARY KEY (`id_broker_record`)
@@ -70,9 +69,9 @@ CREATE TABLE IF NOT EXISTS `broker_record` (
 -- Dumping data for table `broker_record`
 --
 
-INSERT INTO `broker_record` (`id_broker_record`, `broker_title`, `broker_code`, `broker_fee1`, `broker_fee2`, `broker_header`, `broker_createdate`, `broker_status`) VALUES
-(1, 'Broker 1', 'BR', '0.15000', '0.25000', '', '2017-05-30 07:44:57', 'Publish'),
-(2, 'Broker 2', 'BE', '0.15000', '0.25000', '1293025-Banner.jpg', '2017-05-30 08:46:05', 'Publish');
+INSERT INTO `broker_record` (`id_broker_record`, `broker_title`, `broker_code`, `broker_fee1`, `broker_fee2`, `broker_createdate`, `broker_status`) VALUES
+(1, 'Broker 1', 'BR', '0.15000', '0.25000', '2017-05-30 07:44:57', 'Publish'),
+(2, 'Broker 2', 'BE', '0.15000', '0.25000', '2017-05-30 08:46:05', 'Publish');
 
 -- --------------------------------------------------------
 
