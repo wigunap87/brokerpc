@@ -11,13 +11,13 @@
 			return $q->result();
 		}
 		
-		public function add_broker_process($_title, $_code, $_fee1, $_fee2, $_images, $_createdate, $_status) {
-			$sources = array('broker_title'=>$_title, 'broker_code'=>$_code, 'broker_fee1'=>$_fee1, 'broker_fee2'=>$_fee2, 'broker_header'=>$_images, 'broker_createdate'=>$_createdate, 'broker_status'=>$_status);
+		public function add_broker_process($_title, $_code, $_fee1, $_fee2, $_images, $_disclaimer, $_createdate, $_status) {
+			$sources = array('broker_title'=>$_title, 'broker_code'=>$_code, 'broker_fee1'=>$_fee1, 'broker_fee2'=>$_fee2, 'broker_header'=>$_images, 'broker_disclaimer'=>$_disclaimer, 'broker_createdate'=>$_createdate, 'broker_status'=>$_status);
 			$this->db->insert($this->table, $sources);
 		}
 		
-		public function edit_broker_process($_getid, $_title, $_code, $_fee1, $_fee2, $_images, $_status) {
-			$sources = array('broker_title'=>$_title, 'broker_code'=>$_code, 'broker_fee1'=>$_fee1, 'broker_fee2'=>$_fee2, 'broker_header'=>$_images, 'broker_status'=>$_status);
+		public function edit_broker_process($_getid, $_title, $_code, $_fee1, $_fee2, $_images, $_disclaimer, $_status) {
+			$sources = array('broker_title'=>$_title, 'broker_code'=>$_code, 'broker_fee1'=>$_fee1, 'broker_fee2'=>$_fee2, 'broker_header'=>$_images, 'broker_disclaimer'=>$_disclaimer, 'broker_status'=>$_status);
 			$this->db->where('id_'.$this->table, $_getid);
 			$this->db->update($this->table, $sources);
 		}

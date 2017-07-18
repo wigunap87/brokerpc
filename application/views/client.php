@@ -49,10 +49,10 @@
 											<?php echo $wv->client_email; ?>
 										</td>
 										<td valign=top>
-											<?php echo $wv->client_rekrdi; ?>
+											<?php echo $wv->client_rekrdi.'<br/>'.$wv->client_bankname1; ?>
 										</td>
 										<td valign=top>
-											<?php echo $wv->client_rekspv; ?>
+											<?php echo $wv->client_rekspv.'<br/>'.$wv->client_bankname2; ?>
 										</td>
 										<td valign=top align=center>
 											<?php echo $wv->client_feebuy; ?>

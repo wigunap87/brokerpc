@@ -10,7 +10,7 @@
 							<div class="bbox-head">
 								<div class="bbxh-left">View Order Detail - <?php echo $getsingle->client_email; ?></div>
 								<div class="bbxh-right">
-									<div class="bbxhr-toogle"><a href="<?php echo base_url(); ?>order/showprint/<?php echo $getsingle->id_order_record; ?>" target="_blank">Print Correction</a></div>
+									<div class="bbxhr-toogle"><a href="<?php echo base_url(); ?>order/showprint/<?php echo $getsingle->id_order_record; ?>" target="_blank">Print</a></div>
 									<div class="bbxhr-toogle"><a href="<?php echo base_url(); ?>order/showpdf/<?php echo $getsingle->id_order_record; ?>" target="_blank">Show PDF</a></div>
 									
 									<div class="bbxhr-toogle"><a href="#" id="button-tootle1"><img src="<?php echo base_url();  ?>assets/images/toogle.png" /></a></div>
@@ -361,7 +361,7 @@
 								<div class="bb-pagination">&nbsp;</div>
 								<div class="bb-button">
 									
-									<a href="<?php echo base_url(); ?>order/showprint/<?php echo $getsingle->id_order_record; ?>" target="_blank"><button name="invoice" type="button">Print Correction</button></a>
+									<a href="<?php echo base_url(); ?>order/showprint/<?php echo $getsingle->id_order_record; ?>" target="_blank"><button name="invoice" type="button">Print</button></a>
 									<a href="<?php echo base_url(); ?>order/showpdf/<?php echo $getsingle->id_order_record; ?>" target="_blank"><button name="invoice" type="button">Show PDF</button></a>
 									
 								</div>

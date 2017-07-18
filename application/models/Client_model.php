@@ -22,13 +22,13 @@
 			return $q;
 		}
 		
-		public function add_client_process($_category, $_broker, $_title, $_address, $_phone, $_email, $_rekrdi, $_rekspv, $_feebuy, $_feesell, $_emailoperation, $_salesperson, $_notes, $_createdate, $_status) {
-			$sources = array('category_id'=>$_category, 'broker_id'=>$_broker, 'client_title'=>$_title, 'client_address'=>$_address, 'client_phone'=>$_phone, 'client_email'=>$_email, 'client_rekrdi'=>$_rekrdi, 'client_rekspv'=>$_rekspv, 'client_feebuy'=>$_feebuy, 'client_feesell'=>$_feesell, 'client_emailoperation'=>$_emailoperation, 'client_salesperson'=>$_salesperson, 'client_note'=>$_notes, 'client_createdate'=>$_createdate, 'client_status'=>$_status);
+		public function add_client_process($_category, $_broker, $_title, $_address, $_phone, $_email, $_rekrdi, $_rekspv, $_bankname1, $_bankname2, $_feebuy, $_feesell, $_emailoperation, $_salesperson, $_notes, $_createdate, $_status) {
+			$sources = array('category_id'=>$_category, 'broker_id'=>$_broker, 'client_title'=>$_title, 'client_address'=>$_address, 'client_phone'=>$_phone, 'client_email'=>$_email, 'client_rekrdi'=>$_rekrdi, 'client_rekspv'=>$_rekspv, 'client_bankname1'=>$_bankname1, 'client_bankname2'=>$_bankname2, 'client_feebuy'=>$_feebuy, 'client_feesell'=>$_feesell, 'client_emailoperation'=>$_emailoperation, 'client_salesperson'=>$_salesperson, 'client_note'=>$_notes, 'client_createdate'=>$_createdate, 'client_status'=>$_status);
 			$this->db->insert($this->table, $sources);
 		}
 		
-		public function edit_client_process($_getid, $_category, $_broker, $_title, $_address, $_phone, $_email, $_rekrdi, $_rekspv, $_feebuy, $_feesell, $_emailoperation, $_salesperson, $_notes, $_status) {
-			$sources = array('category_id'=>$_category, 'broker_id'=>$_broker, 'client_title'=>$_title, 'client_address'=>$_address, 'client_phone'=>$_phone, 'client_email'=>$_email, 'client_rekrdi'=>$_rekrdi, 'client_rekspv'=>$_rekspv, 'client_feebuy'=>$_feebuy, 'client_feesell'=>$_feesell, 'client_emailoperation'=>$_emailoperation, 'client_salesperson'=>$_salesperson, 'client_note'=>$_notes, 'client_status'=>$_status);
+		public function edit_client_process($_getid, $_category, $_broker, $_title, $_address, $_phone, $_email, $_rekrdi, $_rekspv, $_bankname1, $_bankname2, $_feebuy, $_feesell, $_emailoperation, $_salesperson, $_notes, $_status) {
+			$sources = array('category_id'=>$_category, 'broker_id'=>$_broker, 'client_title'=>$_title, 'client_address'=>$_address, 'client_phone'=>$_phone, 'client_email'=>$_email, 'client_rekrdi'=>$_rekrdi, 'client_rekspv'=>$_rekspv, 'client_bankname1'=>$_bankname1, 'client_bankname2'=>$_bankname2, 'client_feebuy'=>$_feebuy, 'client_feesell'=>$_feesell, 'client_emailoperation'=>$_emailoperation, 'client_salesperson'=>$_salesperson, 'client_note'=>$_notes, 'client_status'=>$_status);
 			$this->db->where('id_'.$this->table, $_getid);
 			$this->db->update($this->table, $sources);
 		}

@@ -80,9 +80,25 @@
 								</div>
 								
 								<div class="fieldpage">
+									<div class="fieldpage-title">Bank Name</div>
+									<div class="fieldpage-info">
+										<input type="text" name="bankname1" class="input-form" maxlength="100"/>
+									</div>
+									<div class="clear"></div>
+								</div>
+								
+								<div class="fieldspage">
 									<div class="fieldpage-title">Rek. SELL<font color="red">*</font></div>
 									<div class="fieldpage-info">
 										<input type="text" name="rekspv" class="input-form" maxlength="100" required/>
+									</div>
+									<div class="clear"></div>
+								</div>
+								
+								<div class="fieldspage">
+									<div class="fieldpage-title">Bank Name</div>
+									<div class="fieldpage-info">
+										<input type="text" name="bankname2" class="input-form" maxlength="100"/>
 									</div>
 									<div class="clear"></div>
 								</div>

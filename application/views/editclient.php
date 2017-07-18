@@ -84,9 +84,25 @@
 								</div>
 								
 								<div class="fieldpage">
+									<div class="fieldpage-title">Bank Name</div>
+									<div class="fieldpage-info">
+										<input type="text" name="bankname1" class="input-form" maxlength="100" value="<?php echo $sgal->client_bankname1; ?>" />
+									</div>
+									<div class="clear"></div>
+								</div>
+								
+								<div class="fieldspage">
 									<div class="fieldpage-title">Rek. SELL</div>
 									<div class="fieldpage-info">
 										<input type="text" name="rekspv" class="input-form" maxlength="100" value="<?php echo $sgal->client_rekspv; ?>" />
+									</div>
+									<div class="clear"></div>
+								</div>
+								
+								<div class="fieldpage">
+									<div class="fieldpage-title">Bank Name</div>
+									<div class="fieldpage-info">
+										<input type="text" name="bankname2" class="input-form" maxlength="100" value="<?php echo $sgal->client_bankname2; ?>" />
 									</div>
 									<div class="clear"></div>
 								</div>

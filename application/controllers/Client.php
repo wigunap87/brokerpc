@@ -87,6 +87,8 @@
 						$_email = $this->security->xss_clean($this->input->post('email'));
 						$_rekrdi = $this->security->xss_clean($this->input->post('rekrdi'));
 						$_rekspv = $this->security->xss_clean($this->input->post('rekspv'));
+						$_bankname1 = $this->security->xss_clean($this->input->post('bankname1'));
+						$_bankname2 = $this->security->xss_clean($this->input->post('bankname2'));
 						$_feebuy = $this->security->xss_clean($this->input->post('feebuy'));
 						$_feesell = $this->security->xss_clean($this->input->post('feesell'));
 						$_emailoperation = $this->security->xss_clean($this->input->post('emailoperation'));
@@ -95,7 +97,7 @@
 						$_createdate = date('Y-m-d H:i:s');
 						$_status = $this->security->xss_clean($this->input->post('status'));
 						
-						$this->Client_model->add_client_process($_category, $_broker, $_title, $_address, $_phone, $_email, $_rekrdi, $_rekspv, $_feebuy, $_feesell, $_emailoperation, $_salesperson, $_notes, $_createdate, $_status);
+						$this->Client_model->add_client_process($_category, $_broker, $_title, $_address, $_phone, $_email, $_rekrdi, $_rekspv, $_bankname1, $_bankname2, $_feebuy, $_feesell, $_emailoperation, $_salesperson, $_notes, $_createdate, $_status);
 						redirect('client', 'refresh');
 					}
 				} else {
@@ -136,6 +138,8 @@
 					$_email = $this->security->xss_clean($this->input->post('email'));
 					$_rekrdi = $this->security->xss_clean($this->input->post('rekrdi'));
 					$_rekspv = $this->security->xss_clean($this->input->post('rekspv'));
+					$_bankname1 = $this->security->xss_clean($this->input->post('bankname1'));
+					$_bankname2 = $this->security->xss_clean($this->input->post('bankname2'));
 					$_feebuy = $this->security->xss_clean($this->input->post('feebuy'));
 					$_feesell = $this->security->xss_clean($this->input->post('feesell'));
 					$_emailoperation = $this->security->xss_clean($this->input->post('emailoperation'));
@@ -143,7 +147,7 @@
 					$_notes = $this->security->xss_clean($this->input->post('notes'));
 					$_status = $this->security->xss_clean($this->input->post('status'));
 						
-					$this->Client_model->edit_client_process($_getid, $_category, $_broker, $_title, $_address, $_phone, $_email, $_rekrdi, $_rekspv, $_feebuy, $_feesell, $_emailoperation, $_salesperson, $_notes, $_status);
+					$this->Client_model->edit_client_process($_getid, $_category, $_broker, $_title, $_address, $_phone, $_email, $_rekrdi, $_rekspv, $_bankname1, $_bankname2, $_feebuy, $_feesell, $_emailoperation, $_salesperson, $_notes, $_status);
 					redirect('client', 'refresh');
 					
 				} else {

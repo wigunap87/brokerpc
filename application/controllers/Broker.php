@@ -57,6 +57,7 @@
 						$_code = $this->security->xss_clean($this->input->post('code'));
 						$_fee1 = $this->security->xss_clean($this->input->post('fee1'));
 						$_fee2 = $this->security->xss_clean($this->input->post('fee2'));
+						$_disclaimer = $this->security->xss_clean($this->input->post('disclaimer'));
 						$_createdate = date('Y-m-d H:i:s');
 						$_status = $this->security->xss_clean($this->input->post('status'));
 						
@@ -93,7 +94,7 @@
 							$_images = '';
 						}
 						
-						$this->Broker_model->add_broker_process($_title, $_code, $_fee1, $_fee2, $_images, $_createdate, $_status);
+						$this->Broker_model->add_broker_process($_title, $_code, $_fee1, $_fee2, $_images, $_disclaimer, $_createdate, $_status);
 						redirect('broker', 'refresh');
 					}
 				} else {
@@ -140,6 +141,7 @@
 						$_code = $this->security->xss_clean($this->input->post('code'));
 						$_fee1 = $this->security->xss_clean($this->input->post('fee1'));
 						$_fee2 = $this->security->xss_clean($this->input->post('fee2'));
+						$_disclaimer = $this->security->xss_clean($this->input->post('disclaimer'));
 						$_status = $this->security->xss_clean($this->input->post('status'));
 						
 						$quer = $this->Broker_model->show_broker($_getid);
@@ -180,7 +182,7 @@
 							$_images = $shimages;
 						}
 					
-						$this->Broker_model->edit_broker_process($_getid, $_title, $_code, $_fee1, $_fee2, $_images, $_status);
+						$this->Broker_model->edit_broker_process($_getid, $_title, $_code, $_fee1, $_fee2, $_images, $_disclaimer, $_status);
 						redirect('broker', 'refresh');
 					}
 				} else {

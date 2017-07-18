@@ -4,6 +4,7 @@
 			parent::__construct();
 			$this->load->model('Order_model');
 			$this->load->model('Main_model');
+			$this->load->library('pdfgenerator');
 		}
 		
 		public function index() {
@@ -267,19 +268,32 @@
 			if($this->session->userdata('adminLogin') != TRUE) {
 				redirect('main', 'refresh');
 			} else {
-				$single = $this->Order_model->show_order($val);
-				foreach($single as $si) :
-						$sources['title'] = 'Print Order | System Information Administrator';
-						$sources['name'] = 'Print Order';
-						$sources['content'] = 'showprint';
+				$sources['title'] = 'Print Order | System Information Administrator';
+				$sources['name'] = 'Print Order';
+				$sources['content'] = 'showprint';
 						
-						$sources['show_order'] = $this->Order_model->show_order($val);
-						$sources['getorderbuy'] = $this->Order_model->getdetail($val, $type="Buy");
-						$sources['getordersell'] = $this->Order_model->getdetail($val, $type="Sell");
+				$sources['show_order'] = $this->Order_model->show_order($val);
+				$sources['getorderbuy'] = $this->Order_model->getdetail($val, $type="Buy");
+				$sources['getordersell'] = $this->Order_model->getdetail($val, $type="Sell");
 						
-						// Setting General Information
-						$this->load->view('showprint', $sources);
-				endforeach;
+				// Setting General Information
+				$this->load->view('showprint', $sources);
+				
+			}
+		}
+		
+		public function showpdf($val) {
+			if($this->session->userdata('adminLogin') != TRUE) {
+				redirect('main', 'refresh');
+			} else {
+ 
+				$sources['show_order'] = $this->Order_model->show_order($val);
+				$sources['getorderbuy'] = $this->Order_model->getdetail($val, $type="Buy");
+				$sources['getordersell'] = $this->Order_model->getdetail($val, $type="Sell");
+		 
+				$html = $this->load->view('showprint', $sources, true);
+				
+				$this->pdfgenerator->generate($html,'Print PDF');
 			}
 		}
 	}

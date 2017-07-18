@@ -55,6 +55,14 @@
 								</div>
 								
 								<div class="fieldpage">
+									<div class="fieldpage-title">Disclaimer</div>
+									<div class="fieldpage-info">
+										<textarea name="disclaimer" rows="5" class="input-form"></textarea>
+									</div>
+									<div class="clear"></div>
+								</div>
+								
+								<div class="fieldspage">
 									<div class="fieldpage-title">Status<font color="red">*</font></div>
 									<div class="fieldpage-info">
 										<select name="status" class="input-select" required>
