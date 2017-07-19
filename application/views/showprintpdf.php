@@ -31,7 +31,7 @@
 		<?php
 			if($vp->broker_header != '') {
 				if(file_exists("media/broker/".$vp->broker_header."")) {
-					echo '<img src="'.base_url().'media/broker/'.$vp->broker_header.'" width="100%" />';
+					echo '<img src="./media/broker/'.$vp->broker_header.'" width="100%" />';
 				}
 			}
 		?>

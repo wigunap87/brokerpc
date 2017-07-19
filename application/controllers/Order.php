@@ -291,7 +291,7 @@
 				$sources['getorderbuy'] = $this->Order_model->getdetail($val, $type="Buy");
 				$sources['getordersell'] = $this->Order_model->getdetail($val, $type="Sell");
 		 
-				$html = $this->load->view('showprint', $sources, true);
+				$html = $this->load->view('showprintpdf', $sources, true);
 				
 				$this->pdfgenerator->generate($html,'Print PDF');
 			}
